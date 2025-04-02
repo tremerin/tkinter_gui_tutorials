@@ -13,7 +13,6 @@ text = tk.Text(window,
 text.pack()
 
 def submit():
-    
     print(text.get("1.0", tk.END))
 
 submit_btn = tk.Button(window,

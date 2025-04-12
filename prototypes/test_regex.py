@@ -19,10 +19,12 @@ print(get_between(argv2, "\033[0m", "\0"))
 
 
 match = re.search("\\033\[41m", argv2)
+match2 = re.search("\\033\[0m", argv2)
 #match = re.search("texto", argv2)
-if match:
+if match and match2:
     print(match.group())     # Devuelve el texto que coincidió con el patrón
     print("\033[0m")
     print(match.start())     # Índice de inicio
     print(match.end())       # Índice de fin
     print(match.span())      # (inicio, fin)
+    print(argv2[match.end():match2.start()])
